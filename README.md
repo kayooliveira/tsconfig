@@ -1,35 +1,59 @@
 # <p align="center"> My tsconfig.json
-
+>## Node
+>I know, I'm a psychopath for putting this in alphabetical order. :smile:
 ```json
-{
+{ 
   "compilerOptions": {
-    "target": "es2020",
-    "lib": ["es6"],
-    "typeRoots": ["./node_modules/@types", "./src/@types"],
     "allowJs": true,
-    "resolveJsonModule": false,
-    "module": "commonjs",
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "esModuleInterop": true,
-    "removeComments": true,
-    "forceConsistentCasingInFileNames": true,
-    "strict": false,
-    "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "lib": ["es6"],
+    "module": "commonjs",
+    "outDir": "./dist",
     "paths": {
-      "@repositories/*": ["./src/repositories/*"],
-      "@providers/*": ["./src/providers/*"],
-      "@useCases/*": ["./src/useCases/*"],
-      "@entities/*": ["./src/entities/*"],
+      "@/*": ["./src/*"],
       "@database/*": ["./src/database/*"]
+      "@entities/*": ["./src/entities/*"],
+      "@providers/*": ["./src/providers/*"],
+      "@repositories/*": ["./src/repositories/*"],
+      "@useCases/*": ["./src/useCases/*"],
     }
+    "removeComments": true,
+    "resolveJsonModule": false,
+    "rootDir": "./src",
+    "skipLibCheck": true,
+    "strict": false,
+    "target": "es2020",
+    "typeRoots": ["./node_modules/@types", "./src/@types"],
   }
 }
 
 ```
-
+>## React
+```json
+{
+  "compilerOptions": {
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": false,
+    "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "noEmit": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": false,
+    "strict": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true
+  },
+  "include": ["./src"]
+}
+```
 --- 
 
 <p align="center">made with :two_hearts: by Kayo Oliveira
